@@ -1,7 +1,7 @@
 # NiftyNotes
 yet another application that organizes  bookmarks, notes, and keys for personal use.  
 
-Why?
+# Why?
 I needed something simple yet effective for personal use, and that's how this little project started. No fancy downloads, no installations, just a straightforward tool that can run from a local computer. No internet? No problem. I wanted something portable, easy to manage, and secure enough for personal use, without any extra software or third-party dependencies. 
 
 # What's under the hood?
