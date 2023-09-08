@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keys</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center-container">
+    <h1>Keys</h1>
+  <div id="navbar">
+    <a href="Notes.html">Notes</a>
+    <a href="Bookmarks.html">Bookmarks</a>
+    <a href="Keys.html">Keys</a>
+ </div>
+    <form id="key-form">
+      Description: <input type="text" id="key-description">
+      Key: <input type="text" id="key-value">
+      <input type="submit" value="Add Key">
+    </form>
+  </div>
+  <table id="keys-list">
+  </table>
+  <div id="navbarhome">
+    <a href="index.html" id="homeIcon">🏠</a> 
+  </div>
+  <script src="common.js"></script>
+  <script src="keys.js"></script>
+  <button id="saveToFile">Save to File</button>
+<input type="file" id="loadFromFile" style="display:none">
+<button id="loadFileButton">Load from File</button>
+  <script>
+        document.getElementById('saveToFile').addEventListener('click', function() {
+            saveToFile('keys', 'keys.json');
+        });
+
+        document.getElementById('loadFileButton').addEventListener('click', function() {
+            document.getElementById('loadFromFile').click();
+        });
+
+        loadFromFile('keys', 'loadFromFile');
+    </script>
+</body>
+</html>

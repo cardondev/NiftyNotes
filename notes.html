@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center-container">
+    <h1>Notes</h1>
+  <div id="navbar">
+    <a href="Notes.html">Notes</a>
+    <a href="Bookmarks.html">Bookmarks</a>
+    <a href="Keys.html">Keys</a>
+  </div>
+  
+    <form id="note-form">
+      <textarea id="note-text" rows="10" cols="50"></textarea><br>
+      <input type="submit" value="Add Note">
+    </form>
+  </div>
+  
+  <ul id="notes-list">
+    
+  </ul>
+
+<div id="navbarhome">
+    <a href="index.html" id="homeIcon">🏠</a> 
+</div>
+
+<button id="saveToFile">Save to File</button>
+<input type="file" id="loadFromFile" style="display:none">
+<button id="loadFileButton">Load from File</button>
+  <script>
+        document.getElementById('saveToFile').addEventListener('click', function() {
+            saveToFile('notes', 'notes.json');
+        });
+
+        document.getElementById('loadFileButton').addEventListener('click', function() {
+            document.getElementById('loadFromFile').click();
+        });
+
+        loadFromFile('notes', 'loadFromFile');
+    </script>
+  <script src="common.js"></script>
+  <script src="notes.js"></script>
+</body>
+</html>

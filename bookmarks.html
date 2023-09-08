@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookmarks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="center-container">
+    <h1>Bookmarks</h1>
+  <div id="navbar">
+    <a href="Notes.html">Notes</a>
+    <a href="Bookmarks.html">Bookmarks</a>
+    <a href="Keys.html">Keys</a>
+  </div>
+    <form id="bookmark-form">
+      Description: <input type="text" id="bookmark-description">
+      Link: <input type="text" id="bookmark-link">
+      <input type="submit" value="Add Bookmark">
+    </form>
+  </div>
+  
+  <table id="bookmarks-list">
+  </table>
+
+<div id="navbarhome">
+    <a href="index.html" id="homeIcon">🏠</a> 
+</div>
+
+  <script src="common.js"></script>
+  <script src="bookmarks.js"></script>
+<button id="saveToFile">Save to File</button>
+<input type="file" id="loadFromFile" style="display:none">
+<button id="loadFileButton">Load from File</button>
+  <script>
+        document.getElementById('saveToFile').addEventListener('click', function() {
+            saveToFile('bookmarks', 'bookmarks.json');
+        });
+
+        document.getElementById('loadFileButton').addEventListener('click', function() {
+            document.getElementById('loadFromFile').click();
+        });
+
+        loadFromFile('bookmarks', 'loadFromFile');
+    </script>
+</body>
+</html>
+
